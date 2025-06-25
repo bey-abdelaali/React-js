@@ -27,7 +27,10 @@ function App() {
         <div style={{ display: "flex", width: "60%" }}>
           {/* ========Post Container========= */}
           <div style={{ width: "60%" }}>
-            <PostComponent title="title 1" body="body 1" />
+            <PostComponent title="title 1" body="body 1">
+              <h1>Hallo World</h1>
+              <h2>Children Props</h2>
+            </PostComponent>
             <PostComponent title="title 2" body="body 2" />
             <PostComponent title="title 3" body="body 3" />
             <PostComponent title="title 4" body="body 4" />
