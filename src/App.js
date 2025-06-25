@@ -4,6 +4,7 @@ import HeaderComponent from "./HeaderComponent";
 import PostComponent from "./PostComponent";
 import DivComponent from "./DivComponent";
 function App() {
+  const content = `اكاديمية مخصصة لتعليم لغات البرمجة وجميع تقنياتها`;
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -27,14 +28,14 @@ function App() {
         <div style={{ display: "flex", width: "60%" }}>
           {/* ========Post Container========= */}
           <div style={{ width: "60%" }}>
-            <PostComponent title="title 1" body="body 1">
-              <h1>Hallo World</h1>
-              <h2>Children Props</h2>
+            <PostComponent title="اكاديمية ترميز" body={content}>
+              <h1 style={{ margin: "10px" }}>20</h1>
             </PostComponent>
-            <PostComponent title="title 2" body="body 2" />
-            <PostComponent title="title 3" body="body 3" />
-            <PostComponent title="title 4" body="body 4" />
-            <PostComponent title="title 5" body="body 5" />
+            <PostComponent
+              title="hello world"
+              body="this is the hello world article "
+            />
+            <PostComponent title="Post 3" body="this is a body of post 3" />
           </div>
           {/* ========Post Container========= */}
           {/* Side Menu */}

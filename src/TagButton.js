@@ -1,5 +1,10 @@
 import "./TagButton.css";
 
-export default function TagButton({ tag }) {
-  return <button>{tag}</button>;
+export default function TagButton({ tag, children }) {
+  return (
+    <button>
+      {tag}
+      {children}
+    </button>
+  );
 }
