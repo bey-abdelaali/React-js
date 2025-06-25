@@ -1,0 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.divClass {
+  border: solid 5px teal;
+  margin: 25px;
+}

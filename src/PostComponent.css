@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.postClass {
+  border: solid 5px teal;
+  padding: 10px;
+  margin: 25px;
+}
+.postClass h2 {
+  text-transform: capitalize;
+}
+.postClass p {
+  text-transform: capitalize;
+}
