@@ -27,11 +27,11 @@ function App() {
         <div style={{ display: "flex", width: "60%" }}>
           {/* ========Post Container========= */}
           <div style={{ width: "60%" }}>
-            <PostComponent />
-            <PostComponent />
-            <PostComponent />
-            <PostComponent />
-            <PostComponent />
+            <PostComponent title="title 1" body="body 1" />
+            <PostComponent title="title 2" body="body 2" />
+            <PostComponent title="title 3" body="body 3" />
+            <PostComponent title="title 4" body="body 4" />
+            <PostComponent title="title 5" body="body 5" />
           </div>
           {/* ========Post Container========= */}
           {/* Side Menu */}
