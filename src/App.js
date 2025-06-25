@@ -3,8 +3,26 @@ import "./App.css";
 import HeaderComponent from "./HeaderComponent";
 import PostComponent from "./PostComponent";
 import DivComponent from "./DivComponent";
+const showcategory = true;
 function App() {
   const content = `اكاديمية مخصصة لتعليم لغات البرمجة وجميع تقنياتها`;
+  const Posts = [
+    { id: 1, title: "اكاديمية ترميز", body: content },
+    { id: 2, title: "hello world", body: "this is the hello world article " },
+    { id: 3, title: "post 3", body: "this is a body of post 3" },
+    { id: 4, title: "post 4", body: "this is a body of post 4" },
+    { id: 5 },
+  ];
+  let PostsLists = Posts.map((Post) => {
+    return (
+      // <div key={Post.id} className={"postClass"}>
+      //   <h2>{Post.title}</h2>
+      //   <hr style={{ margin: "10px" }} />
+      //   <p>{Post.body}</p>
+      // </div>
+      <PostComponent key={Post.id} title={Post.title} body={Post.body} />
+    );
+  });
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -27,20 +45,11 @@ function App() {
         {/* Post and SideMenu  */}
         <div style={{ display: "flex", width: "60%" }}>
           {/* ========Post Container========= */}
-          <div style={{ width: "60%" }}>
-            <PostComponent title="اكاديمية ترميز" body={content}>
-              <h1 style={{ margin: "10px" }}>20</h1>
-            </PostComponent>
-            <PostComponent
-              title="hello world"
-              body="this is the hello world article "
-            />
-            <PostComponent title="Post 3" body="this is a body of post 3" />
-          </div>
+          <div style={{ width: "60%" }}>{PostsLists}</div>
           {/* ========Post Container========= */}
           {/* Side Menu */}
           <div style={{ width: "40%" }}>
-            <DivComponent />
+            <AppSideMenu />
           </div>
           {/*===== Side Menu =====*/}
         </div>
@@ -49,5 +58,11 @@ function App() {
     </div>
   );
 }
-
+function AppSideMenu() {
+  if (showcategory == true) {
+    return <DivComponent />;
+  } else {
+    return null;
+  }
+}
 export default App;

@@ -13,6 +13,12 @@ button {
   cursor: pointer;
   transition: all 0.3s;
 }
+.Btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 button:hover {
   background-color: rgb(185, 19, 185);
 }

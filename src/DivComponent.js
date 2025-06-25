@@ -1,29 +1,35 @@
 import "./DivComponent.css";
 import TagButton from "./TagButton";
 export default function DivComponent() {
-  return (
-    <div className={"divClass"}>
-      <TagButton tag="الجديدة" />
-      <TagButton tag="الاكثر قرااة">
+  const BoutonTags = [
+    { id: 1, tag: "الجديدة", c: "" },
+    {
+      id: 2,
+      tag: "الاكثر قرااة",
+      c: (
         <div>
           <span>💻💻💻</span>
         </div>
-      </TagButton>
-      <TagButton
-        tag="مقالات مميزة"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "40px",
-        }}
-      >
-        {" "}
-        <div>
+      ),
+    },
+    {
+      id: 3,
+      tag: "مقالات مميزة",
+      c: (
+        <div className="Btn">
           <span>⭐️⭐️⭐️</span>
+
+          <img src="/logo192.png" width={"100px"} height={"150px"}></img>
         </div>
-        <img src="/logo192.png" width={"100px"} height={"150px"}></img>
+      ),
+    },
+  ];
+  const BoutonTagLists = BoutonTags.map((BoutonTag) => {
+    return (
+      <TagButton key={BoutonTag.id} tag={BoutonTag.tag}>
+        {BoutonTag.c}
       </TagButton>
-    </div>
-  );
+    );
+  });
+  return <div className={"divClass"}>{BoutonTagLists}</div>;
 }
